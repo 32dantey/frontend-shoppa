@@ -1,0 +1,80 @@
+.header{
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    border-bottom: 1px solid rgb(211, 209, 209);
+}
+.innerheader{
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 5px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+.logo2{
+    text-decoration: none;
+}
+form{
+    display: flex;
+}
+.searchiconandinput{
+    display: flex;
+    padding: 20px;
+    height: 50px;
+    width: 500px;
+    margin-right: 20px;
+    background-color: rgb(243, 242, 242);
+    border-radius: 30px;
+    align-items: center;
+}
+.searchiconandinput>input{
+    width:100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgb(243, 242, 242);
+    border: none;
+    outline: none;
+}
+.button{
+    height: 40px;
+    margin-top: 5px;
+}
+.user_cart{
+    display: flex;
+    background-color: white;
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.user_name{
+    margin-top: 15px !important;
+    text-decoration: none !important;
+    color: black !important;
+    font-size: 20px;
+}
+.cart{
+    text-decoration: none !important;
+}
+.cart .cart_count{
+    margin-top: 10px;
+    margin-bottom: -5px;
+    z-index: 1;
+    margin-left: 10px;
+    border-radius: 50%;
+    color: white;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+}
+.cart_icon{
+    display: flex;
+    color: black !important;
+    font-size: 22px !important;
+}
+.shoppingcarticon{
+    font-size: 40px !important;
+}
