@@ -11,7 +11,7 @@ import {
 
 function Header() {
     const itemsInCart = useSelector(state=>state.cart);
-    console.log(itemsInCart.length)
+    // console.log(itemsInCart.length)
     return (
         <div className="header">
         <div className="innerheader">

@@ -1,6 +1,6 @@
 import React from 'react'
 import {useSelector, useDispatch} from 'react-redux'
-import { addToCart } from '../redux/actions'
+import { addToCart,removeFromCart } from '../redux/actions'
 import './Drink.css'
 import { Link } from 'react-router-dom'
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
@@ -22,14 +22,15 @@ function Drink(props) {
     // specific drink details
     const loadedData =()=>{
         if(state){
-            const drink = state.filter(drink=>drink.id===id); 
+            const drink = state.filter(drink=>drink.id===id);
 
            const checkItemIfInCart=()=>{
                 for(var item of itemsInCart){
                     if(item.id===id){
                         return(
-                           <div className="bg-secondary text-white div" style={{marginRight:"60px", paddingLeft:"20px"}}>
-                                <p>Item added to cart</p>
+                           <div>
+                            <p className="text-secondary" style={{borderBottom:"1px solid grey", width:"150px"}}>Item added to cart</p>
+                            <button onClick={()=>dispatch(removeFromCart(id))} className="btn btn btn-secondary h6" >REMOVE FROM CART</button>
                            </div>
                         )
                     }
@@ -45,6 +46,7 @@ function Drink(props) {
                             <div className="explanations">
                                 <div className="top">
                                     <p className="h6">{drink.name}</p>
+                                    <p>{drink.variation}</p>
                                     <p className="brand">Brand: <Link to="/" className="text-info brand">{drink.brand} | shop your favourite brand</Link></p>
                                 </div>
                                 <div className="bottom">
@@ -52,7 +54,7 @@ function Drink(props) {
                                     {drink.previous_price && <s><p >Was: Ksh {drink.previous_price}</p></s>}
                                     {drink.discount && <p className="text-secondary">Discounted percentage: {drink.discount}%</p>}
                                     {checkItemIfInCart()}
-                                    <button onClick={()=>dispatch(addToCart(drink))} className="btn btn btn-primary btn-lg h6" >ADD TO CART</button>
+                                    <button id="add" onClick={()=>dispatch(addToCart(drink))} className="btn btn btn-primary btn-lg h6" >ADD TO CART</button>
                                 </div>
                             </div>
 

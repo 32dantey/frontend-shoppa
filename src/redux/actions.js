@@ -4,8 +4,25 @@ export const GET_DRINKS = "GET_DRINKS"
 export const ADD_TO_CART = "ADD_TO_CART"
 export const LOADING_DRINKS = "LOADING_DRINKS"
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART"
+export const INCREASE_QUANTITY = "INCREASE_QUANTITY"
+export const DECREASE_QUANTITY = "DECREASE_QUANTITY"
 
 
+
+
+export const increaseQuantity = (id)=>{
+    return{
+        type:INCREASE_QUANTITY,
+        payload:id
+    }
+}
+
+export const decreaseQuantity = (id)=>{
+    return{
+        type:DECREASE_QUANTITY,
+        payload:id
+    }
+}
 
 export const addToCart = (item)=>{
     return{
@@ -14,10 +31,10 @@ export const addToCart = (item)=>{
     }
 }
 
-export const removeFromCart = (item)=>{
+export const removeFromCart = (id)=>{
     return{
-        type:ADD_TO_CART,
-        payload:item
+        type:REMOVE_FROM_CART,
+        payload:id
     }
 }
 

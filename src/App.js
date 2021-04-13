@@ -6,6 +6,7 @@ import {fetchDrinks} from './redux/actions'
 import Cart from './components/Cart'
 import Home from './components/Home'
 import Drink from './components/Drink'
+import Shipping from './components/Shipping'
 import ScrollToTop from './components/ScrollToTop'
 import AllWinesAndSpirits from './listDrinks/AllWinesAndSpirits'
 import AllEnergyDrinks from './listDrinks/AllEnergyDrinks'
@@ -36,6 +37,7 @@ function App () {
             <Route path="/EnergyDrinks" component={AllEnergyDrinks} />
             <Route path="/SoftDrinks" component={AllSoftDrinks} />
             <Route path="/Water" component={AllWater} />
+            <Route path="/shipping" component={Shipping} />
             {/* passing the router props to my Drink component  */}
             <Route path="/:post_id" render={props=><Drink {...props}/>} /> 
                     

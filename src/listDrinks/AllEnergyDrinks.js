@@ -47,9 +47,9 @@ function AllEnergyDrinks() {
                     <div className="jumbotron text-white jumbotron-image shadow jambo" 
                         style={{backgroundImage: `url(${randomDrink.cover_picture})`,
                         backgroundRepeat: 'no-repeat', 
-                        height:'200px',
-                        width:'40%',
-                        objectFit:'cover'}}>
+                        height:'220px',
+                        width:'300px',
+                        objectFit:'100%'}}>
                         <Link to={"/"+ randomDrink.id} className="btn btn-primary">view</Link>
                     </div>
         

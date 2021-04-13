@@ -1,0 +1,29 @@
+.shipping{
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    height: auto;
+}
+.form{
+    display: block;
+}
+.line_height{
+    margin-top: 20px;
+}
+.your{
+    position: absolute;
+    top:120px;
+    left: 700px;
+    padding: 20px;
+    height: auto;
+    width: auto;
+    border-left: 1px solid grey;
+}
+.your_order{
+    display: flex;
+    border-bottom: 1px solid rgb(221, 219, 219);
+    padding: 10px;
+}
+.your_order>img{
+    width: 80px;
+}
