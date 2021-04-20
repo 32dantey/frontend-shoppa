@@ -3,7 +3,8 @@ import { LOADING_DRINKS,
     ADD_TO_CART,
     REMOVE_FROM_CART,
     DECREASE_QUANTITY,
-    INCREASE_QUANTITY 
+    INCREASE_QUANTITY ,
+    USER_DETAILS
 } from './actions'
 
 
@@ -12,7 +13,8 @@ const initialState = {
     loading:false,
     cart:[],
     grandTotal:0, //the total price for items in cart
-    allDrinks: []
+    allDrinks: [],
+    user:[]
 }
 
 export const drinksReducer = (state=initialState, action)=>{
@@ -21,6 +23,14 @@ export const drinksReducer = (state=initialState, action)=>{
             return{
                 ...state,
                 loading: true
+            }
+        case USER_DETAILS:
+            localStorage.setItem('token', action.payload.token)
+            localStorage.setItem('username', action.payload.username)
+            localStorage.setItem('userId', action.payload.user_id)
+            return{
+                ...state,
+                user: action.payload
             }
         case GET_DRINKS:
             return{

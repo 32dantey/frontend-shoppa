@@ -6,6 +6,7 @@ export const LOADING_DRINKS = "LOADING_DRINKS"
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART"
 export const INCREASE_QUANTITY = "INCREASE_QUANTITY"
 export const DECREASE_QUANTITY = "DECREASE_QUANTITY"
+export const USER_DETAILS = "USER_DETAILS"
 
 
 
@@ -51,9 +52,18 @@ export const loadingDrinks = ()=>{
     }
 }
 
+export const addUserDetails = (data)=>{
+    return{
+        type:USER_DETAILS,
+        payload: data
+    }
+}
+
 export const fetchDrinks = ()=>(dispatch)=>{
     dispatch(loadingDrinks())
-    return axios.get('http://127.0.0.1:8000/all_drinks/')
+    return axios.get('http://127.0.0.1:8000/all_drinks/', {
+        Headers: `Token ${localStorage.getItem('token')}`
+    })
     .then(res=>{
         dispatch({ type:GET_DRINKS, payload:res.data})
     })

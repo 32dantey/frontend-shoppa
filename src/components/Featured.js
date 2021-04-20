@@ -33,26 +33,26 @@ function Featured() {
     const featuredProducts = ()=>{
         if(state){
             return(
-                <div className="featured">
-            <div className="right">
-                <Link to="/Winesandspirits" className="h6 text-secondary link"><p><img alt="showcase" className="bottleIcons" src="https://img.icons8.com/fluent/50/000000/champagne-bottle.png"/>Wines and Spirits</p></Link>
-                <Link to="/EnergyDrinks" className="h6 text-secondary link"><p><img alt="showcase" className="bottleIcons" src="https://img.icons8.com/cute-clipart/64/000000/energy-drink.png"/>Energy Drinks</p></Link>
-                <Link to="/SoftDrinks" className="h6 text-secondary link"><p><img alt="showcase" className="bottleIcons" src="https://img.icons8.com/cotton/64/000000/orange-soda-bottle--v1.png"/>Soft Drinks</p></Link>
-                <Link to="/Water" className="h6 text-secondary link"><p><img alt="showcase" className="bottleIcons" src="https://img.icons8.com/fluent/48/000000/sport-bottle.png"/>Water</p></Link>
+            <div className="featured">
+                <div className="right">
+                    <Link to="/Winesandspirits" className="h6 text-secondary link"><p><img alt="showcase" className="bottleIcons" src="https://img.icons8.com/fluent/50/000000/champagne-bottle.png"/>Wines and Spirits</p></Link>
+                    <Link to="/EnergyDrinks" className="h6 text-secondary link"><p><img alt="showcase" className="bottleIcons" src="https://img.icons8.com/cute-clipart/64/000000/energy-drink.png"/>Energy Drinks</p></Link>
+                    <Link to="/SoftDrinks" className="h6 text-secondary link"><p><img alt="showcase" className="bottleIcons" src="https://img.icons8.com/cotton/64/000000/orange-soda-bottle--v1.png"/>Soft Drinks</p></Link>
+                    <Link to="/Water" className="h6 text-secondary link"><p><img alt="showcase" className="bottleIcons" src="https://img.icons8.com/fluent/48/000000/sport-bottle.png"/>Water</p></Link>
+                </div>
+                <AliceCarousel
+                    items={featured}
+                    responsive={responsive}
+                    autoPlayInterval={4000}
+                    autoPlayDirection="ltr"
+                    autoPlay={true}
+                    infinite={true}
+                    fadeOutAnimation={true}
+                    mouseTrackingEnabled={true}
+                    disableAutoPlayOnAction={true}
+                    disableButtonsControls={true}
+                />
             </div>
-               <AliceCarousel
-                items={featured}
-                responsive={responsive}
-                autoPlayInterval={4000}
-                autoPlayDirection="ltr"
-                autoPlay={true}
-                infinite={true}
-                fadeOutAnimation={true}
-                mouseTrackingEnabled={true}
-                disableAutoPlayOnAction={true}
-                disableButtonsControls={true}
-            />
-        </div>
             )
         }
     }

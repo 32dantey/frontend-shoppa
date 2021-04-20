@@ -23,14 +23,14 @@ function Cart() {
     return (
         <div className="cart">
             <h3>Cart({cartItems.length} items)</h3>
-            <div className="headings">
-                <p className="items">ITEM</p>
-                <p className="quantity">QUANTITY</p>
-                <p className="price">UNIT PRICE</p>
-                <p className="subtotal">SUBTOTAL</p>
+            <div className="h5 headings">
+                <p className="h5 items">ITEM</p>
+                <p className="h5 quantity">QUANTITY</p>
+                <p className="h5 price">UNIT PRICE</p>
+                <p className="h5 subtotal">SUBTOTAL</p>
             </div>
             {cartItems.map(item=>(
-                <div className="div">
+                <div className="div" key={item.id}>
                     <div className= "itemyenyewe">
                 
                         <div className="itemz">

@@ -11,7 +11,15 @@ import {
 
 function Header() {
     const itemsInCart = useSelector(state=>state.cart);
-    // console.log(itemsInCart.length)
+    // const userDetails = useSelector(state=>state.user)
+    const token = localStorage.getItem('token');
+
+    const logOut =()=>{
+        localStorage.removeItem('token');
+        // reloading a page on button click
+        window.location.reload();
+    }
+
     return (
         <div className="header">
         <div className="innerheader">
@@ -29,11 +37,11 @@ function Header() {
             </form>
 
             <div className="user_cart">
-                <div className="user">
+                {token?<div className="user">
                     <PersonIcon />
-                    <Link to="/" className="text-muted user_name"><p className="text-muted">Hi, Ayuen</p></Link>
-                </div>
-
+                    <Link to="/" className="text-muted user_name"><p className="text-muted">{localStorage.getItem('username')}</p></Link>
+                    <button className="btn btn-link text-muted signout" onClick={logOut}>Sign Out</button>
+                </div>: <Link className="text-muted login" to="/login"><p className="text-muted">login</p></Link>}
                 <div >
                     <Link className="cart" to="/cart">
                         <div className="bg-primary cart_count" id="cart_count" >{itemsInCart.length}</div>

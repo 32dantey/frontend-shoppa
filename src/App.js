@@ -12,6 +12,9 @@ import AllWinesAndSpirits from './listDrinks/AllWinesAndSpirits'
 import AllEnergyDrinks from './listDrinks/AllEnergyDrinks'
 import AllSoftDrinks from './listDrinks/AllSoftDrinks'
 import AllWater from './listDrinks/AllWater'
+import Login from './components/Login'
+import Registration from './components/Registration'
+import OrderConfirm from './components/OrderConfirm'
 import {
   BrowserRouter as Router,
   Switch,
@@ -38,6 +41,9 @@ function App () {
             <Route path="/SoftDrinks" component={AllSoftDrinks} />
             <Route path="/Water" component={AllWater} />
             <Route path="/shipping" component={Shipping} />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Registration} />
+            <Route path="/orderconfirm" component={OrderConfirm} />
             {/* passing the router props to my Drink component  */}
             <Route path="/:post_id" render={props=><Drink {...props}/>} /> 
                     
