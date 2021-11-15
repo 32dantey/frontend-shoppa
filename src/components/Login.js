@@ -20,10 +20,10 @@ function Login() {
         email:email,
         password:passWord
     }
-
+  
     const login = (e)=>{
         e.preventDefault();
-        axios.post('http://127.0.0.1:8000/api-token-auth/', data)
+        axios.post('/token-auth/', data)
         .then(res=>{
             dispatch(addUserDetails(res.data));
             history.push("/")

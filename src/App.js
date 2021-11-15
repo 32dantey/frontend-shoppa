@@ -36,6 +36,7 @@ function App () {
             <Route path="/cart">
               <Cart />
             </Route>
+            <Route exact path="/" component={Home} />
             <Route path="/WinesandSpirits" component={AllWinesAndSpirits} />
             <Route path="/EnergyDrinks" component={AllEnergyDrinks} />
             <Route path="/SoftDrinks" component={AllSoftDrinks} />
@@ -47,9 +48,6 @@ function App () {
             {/* passing the router props to my Drink component  */}
             <Route path="/:post_id" render={props=><Drink {...props}/>} /> 
                     
-            <Route path="/">
-               <Home />
-            </Route> 
           </Switch> 
       </div>
       </ScrollToTop >

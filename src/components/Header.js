@@ -24,7 +24,7 @@ function Header() {
         <div className="header">
         <div className="innerheader">
             <div className="logo">
-                <Link className="text-muted logo2" to="/"><h1>SHOPPA</h1></Link>
+                <Link className="text-muted logo2" to="/"><h1>Shoppa</h1></Link>
             </div>
 
 

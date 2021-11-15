@@ -24,7 +24,7 @@ function Registration() {
 
     const signUp = (e)=>{
         e.preventDefault();
-        axios.post('http://127.0.0.1:8000/accounts/registration/', data)
+        axios.post('/accounts/registration/', data)
         .then(res=>{
             console.log(res.data)
             const token = res.data.key;
