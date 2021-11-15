@@ -61,7 +61,7 @@ export const addUserDetails = (data)=>{
 
 export const fetchDrinks = ()=>(dispatch)=>{
     dispatch(loadingDrinks())
-    return axios.get('/all_drinks/', {
+    return axios.get('http://127.0.0.1:8000/all_drinks/', {
         Headers: `Token ${localStorage.getItem('token')}`
     })
     .then(res=>{

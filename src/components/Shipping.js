@@ -42,7 +42,7 @@ function Shipping() {
     console.log(data)
     function sendData(e){
         e.preventDefault();
-        axios.post('/all_drinks/order/', data, {
+        axios.post('http://127.0.0.1:8000/all_drinks/order/', data, {
             headers:{
                 Authorization:`Token ${localStorage.getItem('token')}`
             }

@@ -23,7 +23,7 @@ function Login() {
   
     const login = (e)=>{
         e.preventDefault();
-        axios.post('/token-auth/', data)
+        axios.post('http://127.0.0.1:8000/token-auth/', data)
         .then(res=>{
             dispatch(addUserDetails(res.data));
             history.push("/")
